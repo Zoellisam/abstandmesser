@@ -1,4 +1,34 @@
 basic.forever(function () {
+    if (input.buttonIsPressed(Button.A)) {
+        while (!(calliBot2.entfernung(C2Einheit.cm) < 33)) {
+            basic.setLedColor(0x00ff00)
+            calliBot2.motor(C2Motor.beide, C2Dir.vorwaerts, 50)
+        }
+        basic.setLedColor(0xff0000)
+        calliBot2.motorStop(C2Motor.beide, C2Stop.Bremsen)
+        basic.showString("30")
+        while (!(calliBot2.entfernung(C2Einheit.cm) < 23)) {
+            basic.setLedColor(0x00ff00)
+            calliBot2.motor(C2Motor.beide, C2Dir.vorwaerts, 50)
+        }
+        basic.setLedColor(0xff0000)
+        calliBot2.motorStop(C2Motor.beide, C2Stop.Bremsen)
+        basic.showString("20")
+        while (!(calliBot2.entfernung(C2Einheit.cm) < 13)) {
+            basic.setLedColor(0x00ff00)
+            calliBot2.motor(C2Motor.beide, C2Dir.vorwaerts, 50)
+        }
+        basic.setLedColor(0xff0000)
+        calliBot2.motorStop(C2Motor.beide, C2Stop.Bremsen)
+        basic.showString("10")
+        while (!(calliBot2.entfernung(C2Einheit.cm) < 4)) {
+            basic.setLedColor(0x00ff00)
+            calliBot2.motor(C2Motor.beide, C2Dir.vorwaerts, 50)
+        }
+        basic.setLedColor(0xff0000)
+        calliBot2.motorStop(C2Motor.beide, C2Stop.Bremsen)
+        basic.showString("1")
+    }
     if (input.pinIsPressed(TouchPin.P0)) {
         if (calliBot2.entfernung(C2Einheit.cm) < 33) {
             basic.setLedColor(0xff0000)
